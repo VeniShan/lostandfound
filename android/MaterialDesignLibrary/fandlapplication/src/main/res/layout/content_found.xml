@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Activity.FoundActivity"
+    tools:showIn="@layout/activity_found"
+    android:orientation="vertical"
+    >
+
+    <com.gc.materialdesign.views.LayoutRipple
+        android:layout_width="fill_parent"
+        android:layout_height="64dp"
+        android:background="#FFF"
+        android:clickable="true" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:text="1.欢迎使用本系统进行上交失物." />
+    </com.gc.materialdesign.views.LayoutRipple>
+
+    <com.gc.materialdesign.views.LayoutRipple
+        android:layout_width="fill_parent"
+        android:layout_height="64dp"
+        android:background="#FFF"
+        android:clickable="true" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:text="2.在这里感谢您发自善意捡到了其他乘客遗失的物品,上交失物还请配合送至距离最近的地铁服务台." />
+    </com.gc.materialdesign.views.LayoutRipple>
+
+    <com.gc.materialdesign.views.LayoutRipple
+        android:layout_width="fill_parent"
+        android:layout_height="64dp"
+        android:background="#FFF"
+        android:clickable="true" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:text="3.若不知道最近的上交地点时,可以点击主页面的查看地图,感谢您的配合." />
+    </com.gc.materialdesign.views.LayoutRipple>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Lost">
+
+	<resultMap type="bean.Lost" id="LostResult">
+		<result column="id" jdbcType="INTEGER" property="id" />
+		<result column="name" jdbcType="VARCHAR" property="name" />
+		<result column="type_id" jdbcType="INTEGER" property="type_id" />
+
+		<!-- 不会操作时间 <result column="datetime" jdbcType="DATETIME" property="datetime" 
+			/> -->
+
+		<result column="station_id" jdbcType="INTEGER" property="station_id" />
+		<result column="line_id" jdbcType="INTEGER" property="line_id" />
+		<result column="line_flag" jdbcType="INTEGER" property="line_flag" />
+		<result column="phone" jdbcType="INTEGER" property="phone" />
+		<result column="status" jdbcType="INTEGER" property="status" />
+
+	</resultMap>
+
+	<select id="all" parameterType="long" resultMap="LostResult">
+
+		select id, name, type_id, station_id, line_id, line_flag,
+		phone, status from tb_lost
+
+		<!-- select id, name, type_id, datetime, station_id, line_id, line_flag, 
+			key_1, key_2, key_3, phone, status from tb_lost -->
+
+	</select>
+
+
+	<insert id="add" parameterType="bean.Lost" useGeneratedKeys="true">
+		insert into tb_lost (
+		name,
+		type_id,
+		station_id,
+		line_id,
+		line_flag,
+		phone,
+		status
+		)
+		values (
+		#{name,jdbcType=VARCHAR},
+		#{type_id,jdbcType=INTEGER},
+		#{station_id,jdbcType=INTEGER},
+		#{line_id,jdbcType=INTEGER},
+		#{line_flag,jdbcType=INTEGER},
+		#{phone,jdbcType=INTEGER},
+		#{status,jdbcType=INTEGER}
+		)
+	</insert>
+</mapper>

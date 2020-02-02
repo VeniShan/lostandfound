@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Staff">
+
+  <resultMap type="bean.Staff" id="StaffResult">
+    <result column="id" jdbcType="INTEGER" property="id"/>
+ 	<result column="userid" jdbcType="INTEGER" property="userid"/>
+    <result column="password" jdbcType="VARCHAR" property="password"/>
+    <result column="name" jdbcType="VARCHAR" property="name"/>
+    <result column="station_id" jdbcType="INTEGER" property="station_id"/>
+  </resultMap>
+
+  <select id="find" parameterType="bean.Staff" resultMap="StaffResult">
+    select id, userid, password, name, station_id from tb_staff where userid= #{userid} and password = #{password};
+
+  </select>
+  
+  <select id="all" parameterType="long" resultMap="StaffResult">
+    select id, userid, name, station_id from tb_staff
+  </select>
+  
+  <update id="updateName" parameterType="bean.Staff">
+  	UPDATE tb_staff SET
+  	name = #{name}
+  	WHERE
+  	id = #{id}; 
+  </update>
+  
+  <update id="updatePwd" parameterType="bean.Staff">
+  	UPDATE tb_staff SET
+  	password = #{password} 
+  	WHERE
+  	id = #{id};
+  	
+  </update>
+  
+  <insert id="add" parameterType="bean.Staff" useGeneratedKeys="true">
+  	insert into tb_staff (
+  	userid,
+  	password,
+  	name,
+  	station_id
+  	)
+  	values (
+  	#{userid,jdbcType=INTEGER},
+  	#{password,jdbcType=VARCHAR},
+  	#{name,jdbcType=VARCHAR},
+  	#{station_id,jdbcType=INTEGER}
+  	)
+  </insert>
+  
+</mapper>

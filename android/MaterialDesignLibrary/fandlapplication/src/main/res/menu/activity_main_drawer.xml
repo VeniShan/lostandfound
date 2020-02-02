@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="个人账户" />
+        <item
+            android:id="@+id/nav_item_found"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="我的发布" />
+        <item
+            android:id="@+id/nav_item_lost"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="我的失物" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="系统设置" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="分享经历" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="联系我们" />
+        </menu>
+    </item>
+
+</menu>

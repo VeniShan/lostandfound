@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>lostAndFound</display-name>
+
+	<!-- 欢迎，跳转到登录页面 -->
+	<servlet>
+		<servlet-name>WelcomeServlet</servlet-name>
+		<servlet-class>servlet.WelcomeServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>WelcomeServlet</servlet-name>
+		<url-pattern>/Welcome.action</url-pattern>
+	</servlet-mapping>
+
+	<!-- 欢迎管理员，跳转到管理员登录页面 -->
+	<servlet>
+		<servlet-name>AdminWelcomeServlet</servlet-name>
+		<servlet-class>servlet.AdminWelcomeServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AdminWelcomeServlet</servlet-name>
+		<url-pattern>/AdminWelcome.action</url-pattern>
+	</servlet-mapping>
+
+	<!-- 管理员登录，核对账户id，密码 -->
+	<servlet>
+		<servlet-name>AdminLoginServlet</servlet-name>
+		<servlet-class>servlet.AdminLoginServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AdminLoginServlet</servlet-name>
+		<url-pattern>/AdminLogin.action</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 工作人员返回主页dashboard -->
+	<servlet>
+		<servlet-name>AdminDashboardServlet</servlet-name>
+		<servlet-class>servlet.AdminDashboardServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AdminDashboardServlet</servlet-name>
+		<url-pattern>/AdminDashboard.action</url-pattern>
+	</servlet-mapping>
+
+	<!-- 管理员查看所有工作人员信息 -->
+	<servlet>
+		<servlet-name>StaffListServlet</servlet-name>
+		<servlet-class>servlet.StaffListServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>StaffListServlet</servlet-name>
+		<url-pattern>/StaffList.action</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 管理员新建工作人员信息 -->
+	<servlet>
+		<servlet-name>StaffNewServlet</servlet-name>
+		<servlet-class>servlet.StaffNewServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>StaffNewServlet</servlet-name>
+		<url-pattern>/StaffNew.action</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- 管理员编辑工作人员信息 -->
+	<servlet>
+		<servlet-name>StaffEditServlet</servlet-name>
+		<servlet-class>servlet.StaffEditServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>StaffEditServlet</servlet-name>
+		<url-pattern>/StaffEdit.action</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 管理员删除工作人员信息 -->
+	<servlet>
+		<servlet-name>StaffDeleteServlet</servlet-name>
+		<servlet-class>servlet.StaffDeleteServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>StaffDeleteServlet</servlet-name>
+		<url-pattern>/StaffDelete.action</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 工作人员退出登录 -->
+	<servlet>
+		<servlet-name>AdminLogoutServlet</servlet-name>
+		<servlet-class>servlet.AdminLogoutServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AdminLogoutServlet</servlet-name>
+		<url-pattern>/AdminLogout.action</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+
+	<servlet>
+		<servlet-name>UserListServlet</servlet-name>
+		<servlet-class>servlet.UserListServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UserListServlet</servlet-name>
+		<url-pattern>/UserList.action</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- 工作人员登录，核对账户id，密码 -->
+	<servlet>
+		<servlet-name>StaffLoginServlet</servlet-name>
+		<servlet-class>servlet.StaffLoginServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>StaffLoginServlet</servlet-name>
+		<url-pattern>/StaffLogin.action</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 工作人员退出登录 -->
+	<servlet>
+		<servlet-name>StaffLogoutServlet</servlet-name>
+		<servlet-class>servlet.StaffLogoutServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>StaffLogoutServlet</servlet-name>
+		<url-pattern>/StaffLogout.action</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+
+
+	<!-- 工作人员返回主页dashboard -->
+	<servlet>
+		<servlet-name>DashboardServlet</servlet-name>
+		<servlet-class>servlet.DashboardServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DashboardServlet</servlet-name>
+		<url-pattern>/Dashboard.action</url-pattern>
+	</servlet-mapping>
+
+	<!-- 跳转到后台使用帮助 -->
+	<servlet>
+		<servlet-name>HelpstaffServlet</servlet-name>
+		<servlet-class>servlet.HelpstaffServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HelpstaffServlet</servlet-name>
+		<url-pattern>/Helpstaff.action</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- 跳转到地铁失物招领FAQ -->
+	<servlet>
+		<servlet-name>HelpuserServlet</servlet-name>
+		<servlet-class>servlet.HelpuserServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HelpuserServlet</servlet-name>
+		<url-pattern>/Helpuser.action</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- 跳转到个人资料页面 -->
+	<servlet>
+		<servlet-name>ProfileServlet</servlet-name>
+		<servlet-class>servlet.ProfileServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ProfileServlet</servlet-name>
+		<url-pattern>/Profile.action</url-pattern>
+	</servlet-mapping>
+
+	<!-- 跳转到个人资料编辑页面 -->
+	<servlet>
+		<servlet-name>ProfileEditServlet</servlet-name>
+		<servlet-class>servlet.ProfileEditServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ProfileEditServlet</servlet-name>
+		<url-pattern>/ProfileEdit.action</url-pattern>
+	</servlet-mapping>
+
+	<!-- 工作人员修改昵称 -->
+	<servlet>
+		<servlet-name>StaffNameUpdateServlet</servlet-name>
+		<servlet-class>servlet.StaffNameUpdateServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>StaffNameUpdateServlet</servlet-name>
+		<url-pattern>/StaffNameUpdate.action</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- 工作人员修改密码 -->
+	<servlet>
+		<servlet-name>StaffPwdUpdateServlet</servlet-name>
+		<servlet-class>servlet.StaffPwdUpdateServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>StaffPwdUpdateServlet</servlet-name>
+		<url-pattern>/StaffPwdUpdate.action</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- 跳转到失物信息管理页面 -->
+	<servlet>
+		<servlet-name>LostServlet</servlet-name>
+		<servlet-class>servlet.LostServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LostServlet</servlet-name>
+		<url-pattern>/Lost.action</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- 发布失物信息 -->
+	<servlet>
+		<servlet-name>LostNewServlet</servlet-name>
+		<servlet-class>servlet.LostNewServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LostNewServlet</servlet-name>
+		<url-pattern>/LostNew.action</url-pattern>
+	</servlet-mapping>
+	
+
+
+</web-app>
+
+
+
+
+
+
+
+
+
